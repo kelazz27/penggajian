@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 01, 2021 at 07:06 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- Generation Time: Dec 05, 2023 at 10:50 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,7 +33,7 @@ CREATE TABLE `data_jabatan` (
   `gaji_pokok` varchar(50) NOT NULL,
   `tj_transport` varchar(50) NOT NULL,
   `uang_makan` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `data_jabatan`
@@ -43,7 +43,7 @@ INSERT INTO `data_jabatan` (`id_jabatan`, `nama_jabatan`, `gaji_pokok`, `tj_tran
 (1, 'HRD', '4000000', '600000', '400000'),
 (2, 'Staff Marketing', '2500000', '300000', '200000'),
 (3, 'Admin', '2200000', '300000', '200000'),
-(4, 'Sales', '2500000', '300000', '200000');
+(4, 'Karyawan', '2500000', '300000', '200000');
 
 -- --------------------------------------------------------
 
@@ -61,15 +61,17 @@ CREATE TABLE `data_kehadiran` (
   `hadir` int(11) NOT NULL,
   `sakit` int(11) NOT NULL,
   `alpha` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `data_kehadiran`
 --
 
 INSERT INTO `data_kehadiran` (`id_kehadiran`, `bulan`, `nik`, `nama_pegawai`, `jenis_kelamin`, `nama_jabatan`, `hadir`, `sakit`, `alpha`) VALUES
-(1, '012021', '0987654321', 'Dodi', 'Laki-Laki', 'Staff Marketing', 24, 0, 0),
-(2, '012021', '123456789', 'Fauzi', 'Laki-Laki', 'Admin', 22, 0, 1);
+(1, '012021', '17220088', 'Evan', 'Laki-Laki', 'Admin', 30, 0, 0),
+(2, '012021', '17220154', 'Agung', 'Laki-Laki', 'Admin', 25, 0, 1),
+(3, '012021', '17220154', 'Ridho', 'Laki-Laki', 'Karyawan', 22, 0, 1),
+(4, '012021', '17221021', 'Reyvan', 'Laki-Laki', 'Karyawan', 15, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -89,15 +91,17 @@ CREATE TABLE `data_pegawai` (
   `status` varchar(50) NOT NULL,
   `photo` varchar(100) NOT NULL,
   `hak_akses` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `data_pegawai`
 --
 
 INSERT INTO `data_pegawai` (`id_pegawai`, `nik`, `nama_pegawai`, `username`, `password`, `jenis_kelamin`, `jabatan`, `tanggal_masuk`, `status`, `photo`, `hak_akses`) VALUES
-(1, '123456789', 'Fauzi', 'fauzi', '0bd9897bf12294ce35fdc0e21065c8a7', 'Laki-Laki', 'Admin', '2020-12-26', 'Karyawan Tetap', 'pegawai-210101-a7ca89f5fc.png', 1),
-(2, '0987654321', 'Dodi', 'dodi', 'dc82a0e0107a31ba5d137a47ab09a26b', 'Laki-Laki', 'Staff Marketing', '2021-01-02', 'Karyawan Tidak Tetap', 'pegawai-210101-9847084dc8.png', 2);
+(1, '17220088', 'Evan', 'Evan', '21232f297a57a5a743894a0e4a801fc3', 'Laki-Laki', 'Admin', '2020-12-26', 'Karyawan Tetap', 'admin.png', 1),
+(2, '17220154', 'Agung', 'Agung', '77e2edcc9b40441200e31dc57dbb8829', 'Laki-Laki', 'Admin', '2021-01-02', 'Karyawan Tetap', 'av1.png', 1),
+(3, '17220418', 'Ridho', 'Ridho', '7363a0d0604902af7b70b271a0b96480', 'Laki-Laki', 'Karyawan', '2021-01-02', 'Karyawan Tetap', 'av5.png', 2),
+(4, '17221021', 'Reyvan', 'Reyvan', '202cb962ac59075b964b07152d234b70', 'Laki-Laki', 'Karyawan', '2021-11-11', 'Karyawan Tetap', 'av5.png', 2);
 
 -- --------------------------------------------------------
 
@@ -109,7 +113,7 @@ CREATE TABLE `hak_akses` (
   `id` int(11) NOT NULL,
   `keterangan` varchar(50) NOT NULL,
   `hak_akses` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `hak_akses`
@@ -129,7 +133,7 @@ CREATE TABLE `potongan_gaji` (
   `id` int(11) NOT NULL,
   `potongan` varchar(120) NOT NULL,
   `jml_potongan` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `potongan_gaji`
@@ -187,13 +191,13 @@ ALTER TABLE `data_jabatan`
 -- AUTO_INCREMENT for table `data_kehadiran`
 --
 ALTER TABLE `data_kehadiran`
-  MODIFY `id_kehadiran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_kehadiran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `data_pegawai`
 --
 ALTER TABLE `data_pegawai`
-  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `hak_akses`
