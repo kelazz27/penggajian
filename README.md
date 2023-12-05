@@ -1,7 +1,7 @@
-# [Start Bootstrap - SB Admin 2](http://github.com/kelazz27/penggajian)
+# [PT. Solusi Prima Sentosa](http://github.com/kelazz27/penggajian)
 
 ## Preview
 
-[![SB Admin 2 Preview](https://assets.startbootstrap.com/img/screenshots/themes/sb-admin-2.png)](https://startbootstrap.github.io/startbootstrap-sb-admin-2/)
+![SB Admin 2 Preview](/img/testt.png)
 
 **[Launch Live Preview](http://github.com/kelazz27/penggajian)**
