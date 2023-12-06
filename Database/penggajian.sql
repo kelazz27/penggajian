@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2023 at 10:50 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Dec 06, 2023 at 12:18 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,10 +40,10 @@ CREATE TABLE `data_jabatan` (
 --
 
 INSERT INTO `data_jabatan` (`id_jabatan`, `nama_jabatan`, `gaji_pokok`, `tj_transport`, `uang_makan`) VALUES
-(1, 'HRD', '4000000', '600000', '400000'),
-(2, 'Staff Marketing', '2500000', '300000', '200000'),
-(3, 'Admin', '2200000', '300000', '200000'),
-(4, 'Karyawan', '2500000', '300000', '200000');
+(1, 'HRD', '12500000', '600000', '400000'),
+(2, 'Staff Marketing', '7500000', '300000', '200000'),
+(3, 'Admin', '5500000', '300000', '200000'),
+(4, 'Karyawan', '4500000', '300000', '200000');
 
 -- --------------------------------------------------------
 
@@ -68,10 +68,10 @@ CREATE TABLE `data_kehadiran` (
 --
 
 INSERT INTO `data_kehadiran` (`id_kehadiran`, `bulan`, `nik`, `nama_pegawai`, `jenis_kelamin`, `nama_jabatan`, `hadir`, `sakit`, `alpha`) VALUES
-(1, '012021', '17220088', 'Evan', 'Laki-Laki', 'Admin', 30, 0, 0),
-(2, '012021', '17220154', 'Agung', 'Laki-Laki', 'Admin', 25, 0, 1),
-(3, '012021', '17220154', 'Ridho', 'Laki-Laki', 'Karyawan', 22, 0, 1),
-(4, '012021', '17221021', 'Reyvan', 'Laki-Laki', 'Karyawan', 15, 0, 1);
+(9, '122023', '17220154', 'Agung', 'Laki-Laki', 'Admin', 25, 0, 0),
+(10, '122023', '17220088', 'Evan', 'Laki-Laki', 'Admin', 30, 0, 0),
+(11, '122023', '17221021', 'Reyvan', 'Laki-Laki', 'Karyawan', 20, 0, 0),
+(12, '122023', '17220418', 'Ridho', 'Laki-Laki', 'Karyawan', 15, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -98,9 +98,9 @@ CREATE TABLE `data_pegawai` (
 --
 
 INSERT INTO `data_pegawai` (`id_pegawai`, `nik`, `nama_pegawai`, `username`, `password`, `jenis_kelamin`, `jabatan`, `tanggal_masuk`, `status`, `photo`, `hak_akses`) VALUES
-(1, '17220088', 'Evan', 'Evan', '21232f297a57a5a743894a0e4a801fc3', 'Laki-Laki', 'Admin', '2020-12-26', 'Karyawan Tetap', 'admin.png', 1),
+(1, '17220088', 'Evan', 'Evan', '40d0b2468c229c1ea8e4b59cec45182b', 'Laki-Laki', 'Admin', '2020-12-26', 'Karyawan Tetap', 'admin.png', 1),
 (2, '17220154', 'Agung', 'Agung', '77e2edcc9b40441200e31dc57dbb8829', 'Laki-Laki', 'Admin', '2021-01-02', 'Karyawan Tetap', 'av1.png', 1),
-(3, '17220418', 'Ridho', 'Ridho', '7363a0d0604902af7b70b271a0b96480', 'Laki-Laki', 'Karyawan', '2021-01-02', 'Karyawan Tetap', 'av5.png', 2),
+(3, '17220418', 'Ridho', 'Ridho', '202cb962ac59075b964b07152d234b70', 'Laki-Laki', 'Karyawan', '2021-01-02', 'Karyawan Tetap', 'av5.png', 2),
 (4, '17221021', 'Reyvan', 'Reyvan', '202cb962ac59075b964b07152d234b70', 'Laki-Laki', 'Karyawan', '2021-11-11', 'Karyawan Tetap', 'av5.png', 2);
 
 -- --------------------------------------------------------
@@ -191,7 +191,7 @@ ALTER TABLE `data_jabatan`
 -- AUTO_INCREMENT for table `data_kehadiran`
 --
 ALTER TABLE `data_kehadiran`
-  MODIFY `id_kehadiran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_kehadiran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `data_pegawai`

@@ -51,25 +51,31 @@
 				<th class="text-center">Potongan</th>
 				<th class="text-center">Total Gaji</th>
 			</tr>
-			<?php foreach($potongan as $p) : {
-				$alpha = $p->jml_potongan;
-			} ?>
-			<?php $no=1; foreach($cetak_gaji as $g) : ?>
-			<?php $potongan = $g->alpha * $alpha ?>
-			<tr>
-				<td class="text-center"><?php echo $no++ ?></td>
-				<td class="text-center"><?php echo $g->nik ?></td>
-				<td class="text-center"><?php echo $g->nama_pegawai ?></td>
-				<td class="text-center"><?php echo $g->jenis_kelamin ?></td>
-				<td class="text-center"><?php echo $g->nama_jabatan ?></td>
-				<td class="text-center">Rp. <?php echo number_format($g->gaji_pokok,0,',','.') ?></td>
-				<td class="text-center">Rp. <?php echo number_format($g->tj_transport,0,',','.') ?></td>
-				<td class="text-center">Rp. <?php echo number_format($g->uang_makan,0,',','.') ?></td>
-				<td class="text-center">Rp. <?php echo number_format($potongan,0, ',','.') ?></td>
-				<td class="text-center">Rp. <?php echo number_format($g->gaji_pokok + $g->tj_transport + $g->uang_makan - $potongan,0,',','.') ?></td>
-			</tr>
-			<?php endforeach ;?>
-			<?php endforeach ;?>
+			<?php
+			$alpha = 0;
+			foreach ($potongan as $p) {
+			    $alpha = $p->jml_potongan;
+			}
+			
+			$no = 1;
+			foreach ($cetak_gaji as $g) {
+			    $potongan = $g->alpha * $alpha;
+			    ?>
+			    <tr>
+			        <td class="text-center"><?php echo $no++ ?></td>
+			        <td class="text-center"><?php echo $g->nik ?></td>
+			        <td class="text-center"><?php echo $g->nama_pegawai ?></td>
+			        <td class="text-center"><?php echo $g->jenis_kelamin ?></td>
+			        <td class="text-center"><?php echo $g->nama_jabatan ?></td>
+			        <td class="text-center">Rp. <?php echo number_format($g->gaji_pokok, 0, ',', '.') ?></td>
+			        <td class="text-center">Rp. <?php echo number_format($g->tj_transport, 0, ',', '.') ?></td>
+			        <td class="text-center">Rp. <?php echo number_format($g->uang_makan, 0, ',', '.') ?></td>
+			        <td class="text-center">Rp. <?php echo number_format($potongan, 0, ',', '.') ?></td>
+			        <td class="text-center">Rp. <?php echo number_format($g->gaji_pokok + $g->tj_transport + $g->uang_makan - $potongan, 0, ',', '.') ?></td>
+			    </tr>
+			    <?php
+			}
+			?>
 		</table>
 
 		<table width="100%">
