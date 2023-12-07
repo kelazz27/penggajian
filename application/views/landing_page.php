@@ -260,8 +260,8 @@
       <div class="Footer" id="Footer">
          <div class="container">
             <div class="row">
-               <div class="col-12 text-center my-3">
-                  PT. Solusi Prima Sentosa
+            <div class="col-12 text-center my-3">
+                  Copyright &copy; kelazz27 | Penggajian 2023 - All Rights Reserved
                </div>
             </div>
          </div>
