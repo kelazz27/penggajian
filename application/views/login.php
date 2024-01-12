@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login | Aplikasi Penggajian</title>
+  <title>Login | Penggajian</title>
   <link href="<?php echo base_url(); ?>assets/css/login.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
   <link href="assets/img/favicon.png" rel="icon" type="image/png" />
@@ -16,7 +16,7 @@
     <div class="login-content">
       <form class="user" method="POST" action="<?php echo base_url('login') ?>">
         <img src="<?php echo base_url(); ?>assets/img/logopt.png">
-        <h2 class="title"><font size="5">Penggajian Karyawan</font></h2>
+        <h2 class="title">APLIKASI PENGGAJIAN</h2>
         <?php echo $this->session->flashdata('pesan')?>
               <div class="input-div one">
                  <div class="i">

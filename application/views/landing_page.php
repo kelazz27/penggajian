@@ -56,7 +56,7 @@
                   <div class="col">
                      <div class="box">
                         <div>
-                           <h2><b><i>Penggajian Karyawan</i></b></h2>
+                        <h2><b><i>Penggajian Karyawan</i></b></h2>
                         </div>
                         <p>Selamat datang di aplikasi Sistem Informasi Penggajian Karyawan <br>PT. Solusi Prima Sentosa</p>
                      </div>
@@ -77,11 +77,11 @@
       <div class="Service" id="Tentang">
          <div class="Section">
             <div class="text-center">
-               <h2><b>Informasi</b></h2>
+               <h2><b>Informasi Website</b></h2>
                <p></p>
                <p></p>
                <div class="subHeading">
-                  Berikut informasi lebih lengkap tentang website <br>informasi penggajian karyawan PT. Solusi Prima Sentosa</div>
+                  Berikut informasi singkat tentang website penggajian karyawan</div>
             </div>
 
             <script src="<?php echo base_url(); ?>assets/vendor/jquery/jquery.min.js"></script>
@@ -240,13 +240,13 @@
                            <div class="Job">PT. Solusi Prima Sentosa</div>
                            <div class="social_links">
                               <div class="social">
-                                 <a class="" href="http://github.com/kelazz27"><i class="fab fa-github" aria-hidden="true"></i></a>
+                                 <a class="" href="http://github.com/Kelazz27"><i class="fab fa-github" aria-hidden="true"></i></a>
                               </div>
                               <div class="social">
-                                 <a class="" href="www.instagram.com"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                                 <a class="" href="http://instagram.com"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                               </div>
                               <div class="social">
-                                 <a class="" href="www.youtube.com"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                                 <a class="" href="http://youtube.com"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                               </div>
                            </div>
                         </div>
@@ -261,7 +261,7 @@
          <div class="container">
             <div class="row">
             <div class="col-12 text-center my-3">
-                  Copyright &copy; kelazz27 | Penggajian 2023 - All Rights Reserved
+                  Copyright &copy; Kelazz27 | Penggajian 2023 - All Rights Reserved
                </div>
             </div>
          </div>

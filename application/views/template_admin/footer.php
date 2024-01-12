@@ -26,6 +26,7 @@
 <script src="<?php echo base_url(); ?>assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/demo/datatables-demo.js"></script>
 <link href="<?php echo base_url(); ?>assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link href="../assets/img/favicon.png" rel="icon" type="image/png" />
 
 <script type="text/javascript">
 // Pie Chart Example

@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @link		https://codeigniter.com/user_guide/general/routing.html
  */
 
- #[\AllowDynamicProperties]
+#[\AllowDynamicProperties]
 class CI_Router {
 
 	/**

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2023 at 12:18 PM
+-- Generation Time: Dec 25, 2023 at 03:47 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,10 +40,11 @@ CREATE TABLE `data_jabatan` (
 --
 
 INSERT INTO `data_jabatan` (`id_jabatan`, `nama_jabatan`, `gaji_pokok`, `tj_transport`, `uang_makan`) VALUES
-(1, 'HRD', '12500000', '600000', '400000'),
-(2, 'Staff Marketing', '7500000', '300000', '200000'),
-(3, 'Admin', '5500000', '300000', '200000'),
-(4, 'Karyawan', '4500000', '300000', '200000');
+(1, 'Direktur', '10000000', '1500000', '500000'),
+(2, 'Manager', '8000000', '700000', '300000'),
+(3, 'Supervisi', '7000000', '500000', '300000'),
+(4, 'Staff', '6000000', '500000', '380000'),
+(5, 'Karyawan', '5000000', '400000', '380000');
 
 -- --------------------------------------------------------
 
@@ -68,10 +69,11 @@ CREATE TABLE `data_kehadiran` (
 --
 
 INSERT INTO `data_kehadiran` (`id_kehadiran`, `bulan`, `nik`, `nama_pegawai`, `jenis_kelamin`, `nama_jabatan`, `hadir`, `sakit`, `alpha`) VALUES
-(9, '122023', '17220154', 'Agung', 'Laki-Laki', 'Admin', 25, 0, 0),
-(10, '122023', '17220088', 'Evan', 'Laki-Laki', 'Admin', 30, 0, 0),
-(11, '122023', '17221021', 'Reyvan', 'Laki-Laki', 'Karyawan', 20, 0, 0),
-(12, '122023', '17220418', 'Ridho', 'Laki-Laki', 'Karyawan', 15, 0, 0);
+(1, '112023', '17220088', 'Evan', 'Laki-Laki', 'Direktur', 30, 0, 0),
+(2, '112023', '17220154', 'Agung', 'Laki-Laki', 'Manager', 30, 0, 0), 
+(3, '112023', '17220418', 'Ridho', 'Laki-Laki', 'Supervisi', 30, 0, 0), 
+(4, '112023', '17221021', 'Reyvan', 'Laki-Laki', 'Supervisi', 30, 0, 0),
+(5, '112023', '17220000', 'Aurelia', 'Perempuan', 'Staff', 30, 0, 0); 
 
 -- --------------------------------------------------------
 
@@ -80,17 +82,18 @@ INSERT INTO `data_kehadiran` (`id_kehadiran`, `bulan`, `nik`, `nama_pegawai`, `j
 --
 
 CREATE TABLE `data_pegawai` (
-  `id_pegawai` int(11) NOT NULL,
+  `id_pegawai` int(11) NOT NULL AUTO_INCREMENT,
   `nik` varchar(16) NOT NULL,
-  `nama_pegawai` varchar(100) NOT NULL,
+  `nama_pegawai` varchar(255) NOT NULL,
   `username` varchar(120) NOT NULL,
-  `password` varchar(32) NOT NULL,
+  `password` varchar(100) NOT NULL,
   `jenis_kelamin` varchar(15) NOT NULL,
   `jabatan` varchar(50) NOT NULL,
   `tanggal_masuk` date NOT NULL,
   `status` varchar(50) NOT NULL,
-  `photo` varchar(100) NOT NULL,
-  `hak_akses` int(11) NOT NULL
+  `photo` varchar(255) NOT NULL,
+  `hak_akses` int(11) NOT NULL,
+  PRIMARY KEY (`id_pegawai`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -98,13 +101,11 @@ CREATE TABLE `data_pegawai` (
 --
 
 INSERT INTO `data_pegawai` (`id_pegawai`, `nik`, `nama_pegawai`, `username`, `password`, `jenis_kelamin`, `jabatan`, `tanggal_masuk`, `status`, `photo`, `hak_akses`) VALUES
-(1, '17220088', 'Evan', 'Evan', '40d0b2468c229c1ea8e4b59cec45182b', 'Laki-Laki', 'Admin', '2020-12-26', 'Karyawan Tetap', 'admin.png', 1),
-(2, '17220154', 'Agung', 'Agung', '77e2edcc9b40441200e31dc57dbb8829', 'Laki-Laki', 'Admin', '2021-01-02', 'Karyawan Tetap', 'av1.png', 1),
-(3, '17220418', 'Ridho', 'Ridho', '202cb962ac59075b964b07152d234b70', 'Laki-Laki', 'Karyawan', '2021-01-02', 'Karyawan Tetap', 'av5.png', 2),
-(4, '17221021', 'Reyvan', 'Reyvan', '202cb962ac59075b964b07152d234b70', 'Laki-Laki', 'Karyawan', '2021-11-11', 'Karyawan Tetap', 'av5.png', 2);
-
--- --------------------------------------------------------
-
+(1, '17220088', 'Evan', 'Evan', '40d0b2468c229c1ea8e4b59cec45182b', 'Laki-Laki', 'Direktur', '2020-12-26', 'Karyawan Tetap', 'admin.png', 1),
+(2, '17220154', 'Agung', 'Agung', '4c14a808735abb4b205d1c8cb54ec845', 'Laki-Laki', 'Supervisi', '2021-01-02', 'Karyawan Tetap', 'av1.png', 1),
+(3, '17220418', 'Ridho', 'Ridho', '202cb962ac59075b964b07152d234b70', 'Laki-Laki', 'Supervisi', '2021-01-02', 'Karyawan Tetap', 'av5.png', 1),
+(4, '17221021', 'Reyvan', 'Reyvan', '202cb962ac59075b964b07152d234b70', 'Laki-Laki', 'Supervisi', '2021-11-11', 'Karyawan Tetap', 'av5.png', 1),
+(5, '17220000', 'Aurelia', 'Aurelia', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Staff', '2023-12-24', 'Karyawan Tetap', 'hijab.png', 2);
 --
 -- Table structure for table `hak_akses`
 --
@@ -185,19 +186,19 @@ ALTER TABLE `potongan_gaji`
 -- AUTO_INCREMENT for table `data_jabatan`
 --
 ALTER TABLE `data_jabatan`
-  MODIFY `id_jabatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_jabatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `data_kehadiran`
 --
 ALTER TABLE `data_kehadiran`
-  MODIFY `id_kehadiran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_kehadiran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `data_pegawai`
 --
 ALTER TABLE `data_pegawai`
-  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `hak_akses`

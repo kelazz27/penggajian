@@ -18,7 +18,7 @@ class Dashboard extends CI_Controller {
 	public function index() 
 	{
 		$pegawai = $this->db->query("SELECT * FROM data_pegawai");
-		$admin = $this->db->query("SELECT * FROM data_pegawai WHERE jabatan = 'Admin'");
+		$admin = $this->db->query("SELECT * FROM data_pegawai WHERE hak_akses = '1'");
 		$jabatan = $this->db->query("SELECT * FROM data_jabatan");
 		$kehadiran = $this->db->query("SELECT * FROM data_kehadiran");
 		
