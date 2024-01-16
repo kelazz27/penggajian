@@ -10,15 +10,15 @@ class Login extends CI_Controller {
 		if($this->form_validation->run()==FALSE) {
 			$this->load->view('login');
 		}else{
-			$nik = $this->input->post('nik');
+			$username = $this->input->post('username');
 			$password = $this->input->post('password');
 
-			$cek = $this->ModelPenggajian->cek_login($nik, $password);
+			$cek = $this->ModelPenggajian->cek_login($username, $password);
 
 			if($cek == FALSE)
 			{	
 				$this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible fade show" role="alert">
-				<strong>NIK atau Password Salah!</strong>
+				<strong>Username atau Password Salah!</strong>
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 				</button>
@@ -29,7 +29,7 @@ class Login extends CI_Controller {
 				$this->session->set_userdata('nama_pegawai',$cek->nama_pegawai);
 				$this->session->set_userdata('photo',$cek->photo);
 				$this->session->set_userdata('id_pegawai',$cek->id_pegawai);
-				$this->session->set_userdata('nik',$cek->nik);
+				$this->session->set_userdata('username',$cek->username);
 				switch ($cek->hak_akses) {
 					case 1 : redirect('admin/dashboard');
 						break;
@@ -44,7 +44,7 @@ class Login extends CI_Controller {
 
 	public function _rules()
 	{
-		$this->form_validation->set_rules('nik','nik','required');
+		$this->form_validation->set_rules('username','username','required');
 		$this->form_validation->set_rules('password','password','required');
 	}
 

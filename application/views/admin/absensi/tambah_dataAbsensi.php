@@ -71,7 +71,7 @@
 			<td class="text-center">Nama Pegawai</td>
 			<td class="text-center">Jenias Kalamin</td>
 			<td class="text-center">Jabatan</td>
-			<td class="text-center" width="8%">Hadir</td>
+			<td class="text-center" width="8%">Cuti</td>
 			<td class="text-center" width="8%">Sakit</td>
 			<td class="text-center" width="8%">Alpha</td>
 		</tr>
@@ -89,7 +89,7 @@
 				<td><?php echo $a->nama_pegawai?></td>
 				<td><?php echo $a->jenis_kelamin?></td>
 				<td><?php echo $a->nama_jabatan?></td>
-				<td><input type="number" name="hadir[]" class="form-control" value="0"></td>
+				<td><input type="number" name="cuti[]" class="form-control" value="0"></td>
 				<td><input type="number" name="sakit[]" class="form-control" value="0"></td>
 				<td><input type="number" name="alpha[]" class="form-control" value="0"></td>
 		<?php endforeach; ?>

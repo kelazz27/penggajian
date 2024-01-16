@@ -16,9 +16,9 @@
 	</center>
 
 	<?php
-	if((isset($_GET['bulan']) && $_GET['bulan']!='') && (isset($_GET['tahun']) && $_GET['tahun']!='')){
-			$bulan = $_GET['bulan'];
-			$tahun = $_GET['tahun'];
+	if((isset($_POST['bulan']) && $_POST['bulan']!='') && (isset($_POST['tahun']) && $_POST['tahun']!='')){
+			$bulan = $_POST['bulan'];
+			$tahun = $_POST['tahun'];
 			$bulantahun = $bulan.$tahun;
 		}else{
 			$bulan = date('m');
@@ -33,7 +33,7 @@
 			<td><?php echo $bulan?></td>
 		</tr>
 		<tr>
-			<td>Tahunn</td>
+			<td>Tahun</td>
 			<td>:</td>
 			<td><?php echo $tahun?></td>
 		</tr>

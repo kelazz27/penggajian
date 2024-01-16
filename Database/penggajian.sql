@@ -59,7 +59,7 @@ CREATE TABLE `data_kehadiran` (
   `nama_pegawai` varchar(100) NOT NULL,
   `jenis_kelamin` varchar(20) NOT NULL,
   `nama_jabatan` varchar(50) NOT NULL,
-  `hadir` int(11) NOT NULL,
+  `cuti` int(11) NOT NULL,
   `sakit` int(11) NOT NULL,
   `alpha` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -68,7 +68,7 @@ CREATE TABLE `data_kehadiran` (
 -- Dumping data for table `data_kehadiran`
 --
 
-INSERT INTO `data_kehadiran` (`id_kehadiran`, `bulan`, `nik`, `nama_pegawai`, `jenis_kelamin`, `nama_jabatan`, `hadir`, `sakit`, `alpha`) VALUES
+INSERT INTO `data_kehadiran` (`id_kehadiran`, `bulan`, `nik`, `nama_pegawai`, `jenis_kelamin`, `nama_jabatan`, `cuti`, `sakit`, `alpha`) VALUES
 (1, '112023', '17220088', 'Evan', 'Laki-Laki', 'Direktur', 30, 0, 0),
 (2, '112023', '17220154', 'Agung', 'Laki-Laki', 'Manager', 30, 0, 0), 
 (3, '112023', '17220418', 'Ridho', 'Laki-Laki', 'Supervisi', 30, 0, 0), 
@@ -159,12 +159,6 @@ ALTER TABLE `data_jabatan`
 --
 ALTER TABLE `data_kehadiran`
   ADD PRIMARY KEY (`id_kehadiran`);
-
---
--- Indexes for table `data_pegawai`
---
-ALTER TABLE `data_pegawai`
-  ADD PRIMARY KEY (`id_pegawai`);
 
 --
 -- Indexes for table `hak_akses`

@@ -80,7 +80,7 @@
 						<td class="text-center">Nama Pegawai</td>
 						<td class="text-center">Jenis Kelamin</td>
 						<td class="text-center">Jabatan</td>
-						<td class="text-center">Hadir</td>
+						<td class="text-center">Cuti</td>
 						<td class="text-center">Sakit</td>
 						<td class="text-center">Alpha</td>
 		           </tr>
@@ -93,7 +93,7 @@
 						<td class="text-center"><?php echo $a->nama_pegawai?></td>
 						<td class="text-center"><?php echo $a->jenis_kelamin?></td>
 						<td class="text-center"><?php echo $a->nama_jabatan?></td>
-						<td class="text-center"><?php echo $a->hadir?></td>
+						<td class="text-center"><?php echo $a->cuti?></td>
 						<td class="text-center"><?php echo $a->sakit?></td>
 						<td class="text-center"><?php echo $a->alpha?></td>
 					</tr>

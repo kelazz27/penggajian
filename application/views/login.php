@@ -23,8 +23,8 @@
                     <i class="fas fa-user"></i>
                  </div>
                  <div class="div">
-                    <h5>NIK <?php echo form_error('nik', '<div class="text-small text-danger"> </div>')?></h5>
-                    <input type="text" class="input" name="nik">
+                    <h5>Username <?php echo form_error('username', '<div class="text-small text-danger"> </div>')?></h5>
+                    <input type="text" class="input" name="username">
                  </div>
               </div>
               <div class="input-div pass">

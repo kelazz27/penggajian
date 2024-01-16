@@ -19,7 +19,7 @@ class Slip_Gaji extends CI_Controller {
 	public function index() 
 	{
 		$data['title'] = "Slip Gaji Pegawai";
-		$data['pegawai'] = $this->ModelPenggajian->get_data('data_pegawai')-> result();
+		$data['pegawai'] = $this->ModelPenggajian->get_data('data_pegawai')->result();
 
 		$this->load->view('template_admin/header', $data);
 		$this->load->view('template_admin/sidebar');
@@ -29,8 +29,8 @@ class Slip_Gaji extends CI_Controller {
 
 	public function cetak_slip_gaji(){
 
-	$data['title'] = "Cetak Laporan Absensi Pegawai";
-	$data['potongan'] = $this->ModelPenggajian->get_data('potongan_gaji')-> result();
+	$data['title'] = "Cetak Slip Gaji Pegawai";
+	$data['potongan'] = $this->ModelPenggajian->get_data('potongan_gaji')->result();
 	$nama = $this->input->post('nama_pegawai');
 	$bulan = $this->input->post('bulan');
 	$tahun = $this->input->post('tahun');

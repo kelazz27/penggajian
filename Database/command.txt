@@ -1,4 +1,4 @@
-INSERT INTO data_kehadiran (bulan, nik, nama_pegawai, jenis_kelamin, nama_jabatan, hadir, sakit, alpha)
+INSERT INTO data_kehadiran (bulan, nik, nama_pegawai, jenis_kelamin, nama_jabatan, cuti, sakit, alpha)
 SELECT '112023', nik, nama_pegawai, jenis_kelamin, jabatan, 30, 0, 0
 FROM data_pegawai
 WHERE nik NOT IN (SELECT nik FROM data_kehadiran WHERE bulan = '112023');

@@ -18,7 +18,7 @@
   	</tr>
 
   	<?php foreach($potongan as $p) : ?>
-  		<?php $potongan = $p->jml_potongan; ?>
+  	<?php $potongan = $p->jml_potongan; ?>
   	<?php endforeach; ?>
 
   	<?php foreach ($gaji as $g) : ?>
