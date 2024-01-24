@@ -69,11 +69,11 @@ CREATE TABLE `data_kehadiran` (
 --
 
 INSERT INTO `data_kehadiran` (`id_kehadiran`, `bulan`, `nik`, `nama_pegawai`, `jenis_kelamin`, `nama_jabatan`, `cuti`, `sakit`, `alpha`) VALUES
-(1, '112023', '17220088', 'Evan', 'Laki-Laki', 'Direktur', 30, 0, 0),
-(2, '112023', '17220154', 'Agung', 'Laki-Laki', 'Manager', 30, 0, 0), 
-(3, '112023', '17220418', 'Ridho', 'Laki-Laki', 'Supervisi', 30, 0, 0), 
-(4, '112023', '17221021', 'Reyvan', 'Laki-Laki', 'Supervisi', 30, 0, 0),
-(5, '112023', '17220000', 'Aurelia', 'Perempuan', 'Staff', 30, 0, 0); 
+(1, '112023', '17220088', 'Evan', 'Laki-Laki', 'Direktur', 0, 0, 1),
+(2, '112023', '17220154', 'Agung', 'Laki-Laki', 'Manager', 0, 0, 2), 
+(3, '112023', '17220418', 'Ridho', 'Laki-Laki', 'Supervisi', 0, 0, 3), 
+(4, '112023', '17221021', 'Reyvan', 'Laki-Laki', 'Supervisi', 0, 0, 4),
+(5, '112023', '17220000', 'Aurelia', 'Perempuan', 'Staff', 0, 0, 5); 
 
 -- --------------------------------------------------------
 
@@ -103,8 +103,8 @@ CREATE TABLE `data_pegawai` (
 INSERT INTO `data_pegawai` (`id_pegawai`, `nik`, `nama_pegawai`, `username`, `password`, `jenis_kelamin`, `jabatan`, `tanggal_masuk`, `status`, `photo`, `hak_akses`) VALUES
 (1, '17220088', 'Evan', 'Evan', '40d0b2468c229c1ea8e4b59cec45182b', 'Laki-Laki', 'Direktur', '2020-12-26', 'Karyawan Tetap', 'admin.png', 1),
 (2, '17220154', 'Agung', 'Agung', '4c14a808735abb4b205d1c8cb54ec845', 'Laki-Laki', 'Supervisi', '2021-01-02', 'Karyawan Tetap', 'av1.png', 1),
-(3, '17220418', 'Ridho', 'Ridho', '202cb962ac59075b964b07152d234b70', 'Laki-Laki', 'Supervisi', '2021-01-02', 'Karyawan Tetap', 'av5.png', 1),
-(4, '17221021', 'Reyvan', 'Reyvan', '202cb962ac59075b964b07152d234b70', 'Laki-Laki', 'Supervisi', '2021-11-11', 'Karyawan Tetap', 'av5.png', 1),
+(3, '17220418', 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Laki-Laki', 'Supervisi', '2021-01-02', 'Karyawan Tetap', 'av5.png', 1),
+(4, '17221021', 'Reyvan', 'user', 'ee11cbb19052e40b07aac0ca060c23ee', 'Laki-Laki', 'Staff', '2021-11-11', 'Karyawan Tetap', 'av5.png', 1),
 (5, '17220000', 'Aurelia', 'Aurelia', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Staff', '2023-12-24', 'Karyawan Tetap', 'hijab.png', 2);
 --
 -- Table structure for table `hak_akses`
@@ -142,7 +142,6 @@ CREATE TABLE `potongan_gaji` (
 
 INSERT INTO `potongan_gaji` (`id`, `potongan`, `jml_potongan`) VALUES
 (1, 'Alpha', 100000),
-(2, 'Sakit', 0);
 
 --
 -- Indexes for dumped tables
