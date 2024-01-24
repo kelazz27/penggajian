@@ -141,7 +141,7 @@ CREATE TABLE `potongan_gaji` (
 --
 
 INSERT INTO `potongan_gaji` (`id`, `potongan`, `jml_potongan`) VALUES
-(1, 'Alpha', 100000),
+(1, 'alpha', 100000);
 
 --
 -- Indexes for dumped tables
