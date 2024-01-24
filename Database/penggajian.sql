@@ -104,7 +104,7 @@ INSERT INTO `data_pegawai` (`id_pegawai`, `nik`, `nama_pegawai`, `username`, `pa
 (1, '17220088', 'Evan', 'Evan', '40d0b2468c229c1ea8e4b59cec45182b', 'Laki-Laki', 'Direktur', '2020-12-26', 'Karyawan Tetap', 'admin.png', 1),
 (2, '17220154', 'Agung', 'Agung', '4c14a808735abb4b205d1c8cb54ec845', 'Laki-Laki', 'Supervisi', '2021-01-02', 'Karyawan Tetap', 'av1.png', 1),
 (3, '17220418', 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Laki-Laki', 'Supervisi', '2021-01-02', 'Karyawan Tetap', 'av5.png', 1),
-(4, '17221021', 'Reyvan', 'user', 'ee11cbb19052e40b07aac0ca060c23ee', 'Laki-Laki', 'Staff', '2021-11-11', 'Karyawan Tetap', 'av5.png', 1),
+(4, '17221021', 'Reyvan', 'user', 'ee11cbb19052e40b07aac0ca060c23ee', 'Laki-Laki', 'Staff', '2021-11-11', 'Karyawan Tetap', 'av5.png', 2),
 (5, '17220000', 'Aurelia', 'Aurelia', '202cb962ac59075b964b07152d234b70', 'Perempuan', 'Staff', '2023-12-24', 'Karyawan Tetap', 'hijab.png', 2);
 --
 -- Table structure for table `hak_akses`
