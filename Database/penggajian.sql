@@ -69,11 +69,11 @@ CREATE TABLE `data_kehadiran` (
 --
 
 INSERT INTO `data_kehadiran` (`id_kehadiran`, `bulan`, `nik`, `nama_pegawai`, `jenis_kelamin`, `nama_jabatan`, `cuti`, `sakit`, `alpha`) VALUES
-(1, '112023', '17220088', 'Evan', 'Laki-Laki', 'Direktur', 0, 0, 1),
-(2, '112023', '17220154', 'Agung', 'Laki-Laki', 'Manager', 0, 0, 2), 
-(3, '112023', '17220418', 'Ridho', 'Laki-Laki', 'Supervisi', 0, 0, 3), 
-(4, '112023', '17221021', 'Reyvan', 'Laki-Laki', 'Supervisi', 0, 0, 4),
-(5, '112023', '17220000', 'Aurelia', 'Perempuan', 'Staff', 0, 0, 5); 
+(1, '012024', '17220088', 'Evan', 'Laki-Laki', 'Direktur', 0, 0, 1),
+(2, '012024', '17220154', 'Agung', 'Laki-Laki', 'Manager', 0, 0, 2), 
+(3, '012024', '17220418', 'Ridho', 'Laki-Laki', 'Supervisi', 0, 0, 3), 
+(4, '012024', '17221021', 'Reyvan', 'Laki-Laki', 'Supervisi', 0, 0, 4),
+(5, '012024', '17220000', 'Aurelia', 'Perempuan', 'Staff', 0, 0, 5); 
 
 -- --------------------------------------------------------
 
